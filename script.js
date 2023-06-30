@@ -3,8 +3,9 @@ let myAccountBalance = parseInt(document.getElementById("myAccountBalance").inne
 function sendMoney(){
    var enterName = document.getElementById("enterName").value;
    var enterAmount = parseInt(document.getElementById("enterAmount").value);
-
-   if (enterAmount > 8000) {
+   var TotalAmount = parseInt(document.getElementById("myAccountBalance").innerText);
+   
+   if (enterAmount > TotalAmount) {
       alert("Insufficient Balance.")
    } else {
       var findUserBankAccount = enterName + "BankBalance";
